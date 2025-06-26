@@ -3,17 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Rocket } from 'lucide-react';
 
 const SpaceAnimations = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [rockets, setRockets] = useState<Array<{ id: number; x: number; y: number; targetX: number; targetY: number; active: boolean }>>([]);
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
 
   useEffect(() => {
     // Create rockets periodically
@@ -40,37 +30,6 @@ const SpaceAnimations = () => {
 
   return (
     <>
-      {/* Custom Mouse Cursor with Nitro Effect */}
-      <div 
-        className="fixed pointer-events-none z-50 mix-blend-difference"
-        style={{ 
-          left: mousePosition.x - 10, 
-          top: mousePosition.y - 10,
-          transition: 'all 0.1s ease-out'
-        }}
-      >
-        <div className="relative">
-          <div className="w-5 h-5 bg-github-accent rounded-full opacity-80" />
-          <div className="absolute inset-0 w-5 h-5 bg-github-green rounded-full animate-ping opacity-40" />
-          <div className="absolute -inset-2 w-9 h-9 bg-gradient-to-r from-github-purple to-github-accent rounded-full opacity-20 animate-pulse" />
-        </div>
-      </div>
-
-      {/* Floating Astronaut */}
-      <div className="fixed top-20 right-20 z-10 animate-bounce opacity-60 pointer-events-none hidden lg:block">
-        <div className="text-6xl transform rotate-12">
-          🧑‍🚀
-        </div>
-        <div className="absolute -inset-4 bg-gradient-to-r from-github-accent/20 to-github-purple/20 rounded-full blur-xl animate-pulse" />
-      </div>
-
-      <div className="fixed bottom-32 left-16 z-10 animate-bounce opacity-60 pointer-events-none hidden lg:block" style={{ animationDelay: '1s' }}>
-        <div className="text-5xl transform -rotate-12">
-          👨‍🚀
-        </div>
-        <div className="absolute -inset-4 bg-gradient-to-r from-github-green/20 to-github-orange/20 rounded-full blur-xl animate-pulse" />
-      </div>
-
       {/* Flying Rockets */}
       {rockets.map(rocket => (
         <div

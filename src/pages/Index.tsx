@@ -38,7 +38,7 @@ const Index = () => {
   }
 
   return (
-    <div className="min-h-screen bg-github-bg text-github-text cursor-none">
+    <div className="min-h-screen bg-github-bg text-github-text">
       <SpaceAnimations />
       <Hero />
       <About />

@@ -36,7 +36,9 @@ const Hero = () => {
             <Github className="w-6 h-6 text-github-text" />
           </a>
           <a
-            href="#"
+            href="https://www.linkedin.com/in/hanish-b-ba4928285?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            target="_blank"
+            rel="noopener noreferrer"
             className="p-3 bg-github-secondary border border-github-border rounded-lg hover:bg-github-tertiary transition-all duration-300 hover:scale-110 glow-effect"
           >
             <Linkedin className="w-6 h-6 text-github-text" />

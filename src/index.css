@@ -76,7 +76,6 @@
 
   body {
     @apply bg-github-bg text-github-text font-sans;
-    cursor: none;
   }
 
   html {
