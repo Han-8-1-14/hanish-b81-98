@@ -1,11 +1,53 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React, { useState, useEffect } from 'react';
+import Hero from '@/components/Hero';
+import About from '@/components/About';
+import Skills from '@/components/Skills';
+import Projects from '@/components/Projects';
+import Contact from '@/components/Contact';
+import SplashScreen from '@/components/SplashScreen';
+import CommandInput from '@/components/CommandInput';
 
 const Index = () => {
+  const [showSplash, setShowSplash] = useState(true);
+  const [showCommand, setShowCommand] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowSplash(false);
+    }, 4000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const handleKeyPress = (e: KeyboardEvent) => {
+      if (e.key === '`' && e.ctrlKey) {
+        e.preventDefault();
+        setShowCommand(!showCommand);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, [showCommand]);
+
+  if (showSplash) {
+    return <SplashScreen onComplete={() => setShowSplash(false)} />;
+  }
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="min-h-screen bg-github-bg text-github-text">
+      <Hero />
+      <About />
+      <Skills />
+      <Projects />
+      <Contact />
+      {showCommand && <CommandInput onClose={() => setShowCommand(false)} />}
+      
+      {/* Easter egg hint */}
+      <div className="fixed bottom-4 right-4 text-xs text-github-text/50 font-mono">
+        Press Ctrl + ` for console
       </div>
     </div>
   );
