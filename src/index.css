@@ -76,6 +76,7 @@
 
   body {
     @apply bg-github-bg text-github-text font-sans;
+    cursor: none;
   }
 
   html {
@@ -104,5 +105,19 @@
   @keyframes blink {
     0%, 50% { opacity: 1; }
     51%, 100% { opacity: 0; }
+  }
+
+  @keyframes rocketFly {
+    0% {
+      transform: translateY(0) rotate(-45deg);
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(-100vh) translateX(50px) rotate(-45deg);
+      opacity: 0;
+    }
   }
 }

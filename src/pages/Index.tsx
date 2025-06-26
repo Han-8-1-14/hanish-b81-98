@@ -7,6 +7,7 @@ import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
 import SplashScreen from '@/components/SplashScreen';
 import CommandInput from '@/components/CommandInput';
+import SpaceAnimations from '@/components/SpaceAnimations';
 
 const Index = () => {
   const [showSplash, setShowSplash] = useState(true);
@@ -37,7 +38,8 @@ const Index = () => {
   }
 
   return (
-    <div className="min-h-screen bg-github-bg text-github-text">
+    <div className="min-h-screen bg-github-bg text-github-text cursor-none">
+      <SpaceAnimations />
       <Hero />
       <About />
       <Skills />

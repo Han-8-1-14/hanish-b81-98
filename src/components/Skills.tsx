@@ -8,7 +8,7 @@ const Skills = () => {
       category: "Programming Languages",
       skills: [
         { name: "Python", level: 90, icon: "🐍" },
-        { name: "Java", level: 85, icon: "☕" },
+        { name: "C", level: 60, icon: "⚙️" },
       ]
     },
     {
@@ -16,7 +16,7 @@ const Skills = () => {
       skills: [
         { name: "HTML", level: 90, icon: "🌐" },
         { name: "CSS", level: 85, icon: "🎨" },
-        { name: "JavaScript", level: 80, icon: "⚡" },
+        { name: "JavaScript", level: 55, icon: "⚡" },
       ]
     },
     {

@@ -26,7 +26,7 @@ const About = () => {
             <div className="pl-4 space-y-2">
               <p><span className="text-github-accent">name:</span> <span className="text-github-orange">"Hanish B"</span>,</p>
               <p><span className="text-github-accent">role:</span> <span className="text-github-orange">"Computer Science Engineering Student"</span>,</p>
-              <p><span className="text-github-accent">college:</span> <span className="text-github-orange">"Karpagam College of Engineering"</span>,</p>
+              <p><span className="text-github-accent">college:</span> <span className="text-github-orange">"Bannari Amman Institute of Technology"</span>,</p>
               <p><span className="text-github-accent">year:</span> <span className="text-github-orange">"Final Year"</span>,</p>
               <p><span className="text-github-accent">passion:</span> [<span className="text-github-orange">"Machine Learning"</span>, <span className="text-github-orange">"Software Development"</span>],</p>
               <p><span className="text-github-accent">philosophy:</span> <span className="text-github-orange">"Building projects that solve real-world problems"</span>,</p>
