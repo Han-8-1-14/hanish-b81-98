@@ -103,18 +103,6 @@ const SpaceAnimations = () => {
           />
         ))}
       </div>
-
-      <style jsx>{`
-        @keyframes rocketFly {
-          0% {
-            transform: translateX(0) translateY(0) rotate(var(--rotation));
-          }
-          100% {
-            transform: translateX(${rockets[0]?.targetX - rockets[0]?.x || 0}px) translateY(${rockets[0]?.targetY - rockets[0]?.y || 0}px) rotate(var(--rotation));
-            opacity: 0;
-          }
-        }
-      `}</style>
     </>
   );
 };
