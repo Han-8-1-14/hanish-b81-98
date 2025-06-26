@@ -50,7 +50,7 @@ const Contact = () => {
                 </h3>
                 <div className="text-github-text space-y-2">
                   <p><span className="text-github-accent">Name:</span> Hanish B</p>
-                  <p><span className="text-github-accent">Location:</span> Coimbatore, India</p>
+                  <p><span className="text-github-accent">Location:</span> Chennai, India</p>
                   <p><span className="text-github-accent">Status:</span> <span className="text-github-green">Available for opportunities</span></p>
                 </div>
               </div>
